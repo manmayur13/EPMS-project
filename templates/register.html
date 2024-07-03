@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h2 id="new">Employee Login</h2>
+            <form action="{{ url_for('register')}}" method=POST>
+                <div class="inputBox">
+                    <input type="text" id="us" name="username" placeholder="Username">
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" id="pswd" name="pass" placeholder="password">
+                </div>
+                <div class="inputBox" id="mob">
+                    <input type="email" name="mail" placeholder="Email">
+                </div>
+
+                <div class="inputBox" id="mob1">
+                    <input type="number" name="mob" placeholder="Mobile No.">
+                </div>
+               
+
+                <div class="inputBox">
+                    <input type="submit" value="Sign Up" id="myButton1">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

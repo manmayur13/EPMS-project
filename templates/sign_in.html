@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h2 id="new">Employee Login</h2>
+            <form action="{{ url_for('login')}}" method=POST>
+                <div class="inputBox">
+                    <input type="text" id="us" name="username" placeholder="Username">
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" id="pswd" name="pass" placeholder="password">
+                </div>
+
+               
+
+                <div class="inputBox">
+                    <input type="submit" value="Log in" id="myButton1" onclick="redir()">
+                </div>
+                <p id="mob3" class="forget">New to Company? <a href="{{ url_for('register')}}">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script type="text/javascript">
+
+
+
+        function funct() {
+            document.getElementById("mob").style.display = "flex";
+            document.getElementById("mob1").style.display = "flex";
+            document.getElementById("mob3").style.display = "none";
+            document.getElementById("myButton1").value = "Sign Up";
+            document.getElementById("new").innerHTML="Welcome to Company";
+        }      
+        
+        function redir(){
+            var user = document.getElementById("us");
+            var password = document.getElementById("pswd");
+            
+            let z=0;
+            for (let i = 0; i < my_collection.length; i++){
+                if (my_collection.username == user){
+                    z++;
+                }
+                if (my_collection.password == password){
+                    z++;
+                }
+            }
+            console.log(z);
+            if (z==2){
+                location.href="employee.html";
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

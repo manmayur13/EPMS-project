@@ -1,0 +1,9 @@
+if my_collection.find({"$and":[{'salary':{"$gt":0}},{'name':request.form['search']}]}):
+        edit_user = request.form['search']
+        un = my_collection.find_one({'name' : edit_user})
+        return render_template('edit.html', val=un)
+    else:
+        edit_user = request.form['search']
+        my_collection.update_one({'name':edit_user},{"$set":{'salary':0}})
+        un = my_collection.find_one({'name' : edit_user})
+        return render_template('edit.html', val=un)
